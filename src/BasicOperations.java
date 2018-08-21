@@ -1,6 +1,6 @@
 import java.sql.*;
 
-public class Main {
+public class BasicOperations {
 
 	public static void main(String[] args) {
 	
@@ -20,6 +20,12 @@ public class Main {
 			statement.executeUpdate("INSERT INTO timemanager.note (content) VALUES (\"umyc okna\")");
 			
 			int rowsAffected = statement.executeUpdate("update timemanager.note set content = 'zmywanie' where id = 6");
+			
+			System.out.println("There are: " + rowsAffected + " rows updated");
+			
+			rowsAffected = statement.executeUpdate("delete from timemanager.note where content = 'zakupy'");
+
+			System.out.println("There are: " + rowsAffected + " rows deleted");
 					
 			resultSet = statement.executeQuery("SELECT * FROM timemanager.note");
 						
