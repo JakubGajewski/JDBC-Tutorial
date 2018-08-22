@@ -17,17 +17,17 @@ public class BasicOperations {
 			connection = DriverManager.getConnection(dbUrl, userName, password);
 			statement = connection.createStatement();
 			
-			statement.executeUpdate("INSERT INTO timemanager.note (content) VALUES (\"umyc okna\")");
-			
 			int rowsAffected = statement.executeUpdate("update timemanager.note set content = 'zmywanie' where id = 6");
+			//returns an integer!
 			
 			System.out.println("There are: " + rowsAffected + " rows updated");
 			
 			rowsAffected = statement.executeUpdate("delete from timemanager.note where content = 'zakupy'");
-
+						
 			System.out.println("There are: " + rowsAffected + " rows deleted");
 					
 			resultSet = statement.executeQuery("SELECT * FROM timemanager.note");
+			//returns a result set
 						
 			while (resultSet.next()) {
 				System.out.println(resultSet.getInt(1));

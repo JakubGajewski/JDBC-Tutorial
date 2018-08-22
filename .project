@@ -14,4 +14,11 @@
 	<natures>
 		<nature>org.eclipse.jdt.core.javanature</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>stored_procedures.sql</name>
+			<type>1</type>
+			<locationURI>PROJECT_LOC/sql/stored_procedures.sql</locationURI>
+		</link>
+	</linkedResources>
 </projectDescription>
